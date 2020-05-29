@@ -12,10 +12,6 @@ const routes: Routes = [
 		loadChildren: () => import('./folder/folder.module').then((m) => m.FolderPageModule)
 	},
 	{
-		path: 'home',
-		loadChildren: () => import('./pages/home/home.module').then((m) => m.HomePageModule)
-	},
-	{
 		path: 'buscar',
 		loadChildren: () => import('./pages/buscar/buscar.module').then((m) => m.BuscarPageModule)
 	},
@@ -23,10 +19,10 @@ const routes: Routes = [
 		path: 'cuenta',
 		loadChildren: () => import('./pages/cuenta/cuenta.module').then((m) => m.CuentaPageModule)
 	},
-  {
-    path: 'carrito',
-    loadChildren: () => import('./pages/carrito/carrito.module').then( m => m.CarritoPageModule)
-  }
+	{
+		path: 'carrito',
+		loadChildren: () => import('./pages/carrito/carrito.module').then((m) => m.CarritoPageModule)
+	}
 ];
 
 @NgModule({
