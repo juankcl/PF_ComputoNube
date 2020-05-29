@@ -1,3 +1,4 @@
+2988a65 - añadir los logs y los links- juankcl- juankcl
 032a991 - añadir algunas atrjetas en home para articulos 2- juankcl- juankcl
 0ce2568 - añadir algunas atrjetas en home para articulos- juankcl- juankcl
 95c3ff9 - añadir interfaz de inicio de sesión- juankcl- juankcl
