@@ -1,0 +1,11 @@
+032a991 - añadir algunas atrjetas en home para articulos 2- juankcl- juankcl
+0ce2568 - añadir algunas atrjetas en home para articulos- juankcl- juankcl
+95c3ff9 - añadir interfaz de inicio de sesión- juankcl- juankcl
+eddd508 - Añadir Menu a todos las paginas- juankcl- juankcl
+63047e9 - Agregar Links- juankcl- juankcl
+ce6c815 - Agregar paginas 3- juankcl- juankcl
+e81b5ba - Creacion 2- juankcl- juankcl
+617545d - Creacion de Tienda- juankcl- juankcl
+dc15534 - Add template- juankcl- juankcl
+0d6eda0 - Update README.md- GitHub- Juan Carlos Carrasco
+2b6a7a4 - Add- GitHub- Juan Carlos Carrasco

@@ -1,0 +1,5 @@
+Diagrama Lucid Chart
+https://app.lucidchart.com/invitations/accept/432f0507-41be-4a74-b98b-7515d9b616ae
+
+Actualizar los logs 
+git log --pretty="%h - %s- %cn- %an" > pretierrLogs.txt
