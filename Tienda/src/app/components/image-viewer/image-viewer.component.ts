@@ -1,6 +1,7 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, ElementRef, ViewChild } from '@angular/core';
 import { datosJuego } from '../datosJuego';
 
+import {AnimationController} from '@ionic/angular';
 
 @Component({
   selector: 'app-image-viewer',
@@ -9,6 +10,9 @@ import { datosJuego } from '../datosJuego';
 })
 
 export class ImageViewerComponent implements OnInit {
+
+  @ViewChild("image", {read:ElementRef, static: true}) image:ElementRef;
+
   index: number = 0;
 
   juegoMostrar: datosJuego;
@@ -18,7 +22,35 @@ export class ImageViewerComponent implements OnInit {
     { id: 0, titulo: "Nier Automata", desc: "Super desc1", imagen: "https://cdn3.dualshockers.com/wp-content/uploads/2018/12/NieR.jpg", precio: 999.99 }
   ];
 
-  constructor() { }
+  constructor(
+    private animationCtrl: AnimationController
+  ) {  }
+
+  // Animacion cambio de imágenes
+  async animation() {
+    const fadeout = this.animationCtrl
+      .create()
+      .addElement(this.image.nativeElement)
+      .duration(300)
+      .fromTo("opacity", 1, 0);
+    
+    const delay = this.animationCtrl
+      .create()
+      .addElement(this.image.nativeElement)
+      .fromTo("src", this.juegoMostrar.imagen, this.juegos[this.index].imagen)
+      .duration(150);
+    
+    const fadein = this.animationCtrl
+      .create()
+      .addElement(this.image.nativeElement)
+      .duration(300)
+      .fromTo("opacity", 0, 1);
+
+    await fadeout.play();
+    this.juegoMostrar = this.juegos[this.index];
+    await delay.play();
+    await fadein.play();
+  }
 
   ngOnInit() {
 
@@ -39,8 +71,8 @@ export class ImageViewerComponent implements OnInit {
     if (this.index > this.juegos.length - 1) {
       this.index = 0;
     }
-    console.log(this.index)
-    this.juegoMostrar = this.juegos[this.index];
+
+    this.animation();
   }
 
   anteriorJuego() {
@@ -48,8 +80,8 @@ export class ImageViewerComponent implements OnInit {
     if (this.index < 0) {
       this.index = this.juegos.length - 1;
     }
-
-    this.juegoMostrar = this.juegos[this.index];
+    
+    this.animation();
   }
 
 }
