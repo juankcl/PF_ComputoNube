@@ -8,6 +8,8 @@ import { FolderPageRoutingModule } from './folder-routing.module';
 
 import { FolderPage } from './folder.page';
 
+import { ImageViewerComponent } from '../components/image-viewer/image-viewer.component';
+
 @NgModule({
   imports: [
     CommonModule,
@@ -15,6 +17,6 @@ import { FolderPage } from './folder.page';
     IonicModule,
     FolderPageRoutingModule
   ],
-  declarations: [FolderPage]
+  declarations: [FolderPage, ImageViewerComponent]
 })
 export class FolderPageModule {}
