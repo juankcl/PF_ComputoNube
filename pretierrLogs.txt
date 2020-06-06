@@ -1,3 +1,10 @@
+2a59c35 - Animación cambio de imágen- Emilio Puga- Emilio Puga
+e62386e - Agregar cambiar imagen, título y descripción al presionar las flechas- Emilio Puga- Emilio Puga
+a6bbaf4 - Componente image viewer- Emilio Puga- Emilio Puga
+191d647 - Limpiar página principal- Emilio Puga- Emilio Puga
+00aac44 - Hacer que el botón de mi perfil esté hasta abajo de la lista y hacer cambios a la versión de escritorio- Emilio Puga- Emilio Puga
+79c0824 - Cambiar colores y tipografias- Emilio Puga- Emilio Puga
+b239eca - readme- juankcl- juankcl
 2988a65 - añadir los logs y los links- juankcl- juankcl
 032a991 - añadir algunas atrjetas en home para articulos 2- juankcl- juankcl
 0ce2568 - añadir algunas atrjetas en home para articulos- juankcl- juankcl
