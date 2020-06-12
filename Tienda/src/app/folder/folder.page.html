@@ -8,13 +8,66 @@
 </ion-header>
 
 <ion-content [fullscreen]="true">
-  <div id="container" class="ion-padding main">
+  <div id="container" class="ion-padding " style="display: block;">
     <app-image-viewer></app-image-viewer>
+  </div>
+  <div id="container" class="ion-padding " style="display: block; margin-top: 600px;">
     <h1>
-      Ofertas
+      Articulos
     </h1>
-    <app-lista-juegos></app-lista-juegos>
+    <ion-list>
+      <ion-card *ngFor="let articulo of cosas">
+        <ion-card-header>
+          <ion-avatar class="avatar">
+            <img src="{{articulo.img}}" alt="" text-algn>
+          </ion-avatar>
+          <ion-card-title class="Titulo">{{articulo.titulo}}</ion-card-title>
+        </ion-card-header>
+        <ion-card-content>
+          <ion-row class="ion-align-items-center">
+            <ion-col size="8">
+              <ion-label color="secondary">
+                <b>{{ articulo.precio | currency:'USD' }}</b>
+              </ion-label>
+            </ion-col>
+            <ion-col size="4" class="ion-text-right">
+              <ion-button fill="clear">
+                <ion-icon name="add"></ion-icon>
+              </ion-button>
+            </ion-col>
+          </ion-row>
+        </ion-card-content>
+      </ion-card>
+    </ion-list>
+
+    <ion-list>
+      MIO
+      <h1>Ofertas</h1>
+      <ion-card *ngFor="let articulo of ofertas">
+        <ion-card-header>
+          <ion-avatar class="avatar">
+            <img style="" src="{{articulo.img}}" alt="" text-algn>
+          </ion-avatar>
+          <ion-card-title class="Titulo">{{articulo.titulo}}</ion-card-title>
+        </ion-card-header>
+        <ion-card-content>
+          <ion-row class="ion-align-items-center">
+            <ion-col size="8">
+              <ion-label color="secondary">
+                <b>{{ articulo.precio | currency:'USD' }}</b>
+              </ion-label>
+            </ion-col>
+            <ion-col size="4" class="ion-text-right">
+              <ion-button fill="clear">
+                <ion-icon name="add"></ion-icon>
+              </ion-button>
+            </ion-col>
+          </ion-row>
+        </ion-card-content>
+      </ion-card>
+    </ion-list>
 
   </div>
+
 
 </ion-content>
